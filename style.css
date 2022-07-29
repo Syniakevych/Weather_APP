@@ -1,0 +1,72 @@
+body {
+  background-image: url(img/summer_1.jpg);
+  background-size: cover;
+}
+
+.container {
+  font-family: 'Mukta', sans-serif;
+  padding-top: 110px;
+}
+.weather-app {
+  background-color: rgb(100%,100%,100%,0.7);
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  max-width: 700px;
+  padding: 25px;
+}
+h1, #temp, #time,#celcius {
+  color: #3c4245 !important;
+  font-size: 45px !important;
+}
+.data {
+  color: #3c4245;
+}
+ul, #date, .week {
+  color: #5f6769;
+}
+h1 {
+  margin: 0px !important;
+  padding: 0 0 10px 0;
+}
+ul {
+  display: inline-block;
+  padding: 0 0 0 20px !important;
+}
+li {
+  list-style: none;
+}
+form {
+  padding: 10px 0;
+  background-color: rgb(100%, 100%, 100%, 0);
+}
+span, svg {
+  color: #719192;
+}
+button {
+  transition: all 200ms ease-in-out;
+  opacity: 5;
+  border: 1px;
+  background-color: rgb(100%, 100%, 100%, 0);
+}
+.sun {
+  float: left;
+}
+#date, #time {
+  text-align: right;
+  padding-right: 35px;
+}
+.week {
+  padding: 60px 0 20px 0;
+  text-align: center;
+}
+.night {
+  font-size: 13px;
+}
+a {
+  margin-left: 210px;
+}
+.name {
+  color: white;
+}
