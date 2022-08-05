@@ -42,6 +42,7 @@ document.querySelector("#time").innerHTML = `${hours}:${minutes}`;
 function showWeather(response){
   document.querySelector("#city").innerHTML=response.data.name;
   document.querySelector("#temp").innerHTML=Math.round(response.data.main.temp);
+  document.querySelector("#description").innerHTML=response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
 }
