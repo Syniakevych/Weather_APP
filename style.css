@@ -42,7 +42,8 @@ form {
   padding: 15px 0;
   background-color: rgb(100%, 100%, 100%, 0);
 }
-span, svg {
+span, svg,#celsius-link,
+#fahrenheit-link {
   color: #719192;
 }
 button {
@@ -70,4 +71,7 @@ button {
 }
 .link {
   margin-left: 160px;
+}
+#celsius-link, #fahrenheit-link {
+  text-decoration: none;
 }
