@@ -72,6 +72,8 @@ button {
 .link {
   margin-left: 160px;
 }
-#celsius-link, #fahrenheit-link {
-  text-decoration: none;
+
+#celsius-link.active,#fahrenheit-link.active  {
+  color: #3c4245;
 }
+
