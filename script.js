@@ -60,7 +60,7 @@ function searchCity(city) {
 function search(event) {
   event.preventDefault();
   let city=document.querySelector("#city-input").value;
-  
+  searchCity(city);
 }
 let button = document.querySelector("#search-form");
 button.addEventListener("click", search);
