@@ -75,5 +75,8 @@ button {
 
 #celsius-link.active,#fahrenheit-link.active  {
   color: #3c4245;
+  text-decoration: none;
+  cursor: default;
 }
+
 
