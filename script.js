@@ -38,6 +38,11 @@ if (minutes < 10) {
 }
 document.querySelector("#time").innerHTML = `${hours}:${minutes}`;
 
+function getForecast(coordinates){
+  let apiKey="0037126c84f0bf4c3edaf22e63429f61";
+  let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function showWeather(response){
   let iconElement=document.querySelector("#icon");
@@ -48,6 +53,7 @@ function showWeather(response){
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   celsiusTemp = response.data.main.temp;
+  getForecast(response.data.coord);
 }
 
 
