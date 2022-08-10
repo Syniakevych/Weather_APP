@@ -92,7 +92,25 @@ fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML=Math.round(celsiusTemp);
 }
 
-
+function displayForecast(){
+  let forecastElement=document.querySelector("#weather-forecast");
+  let days=["Thu","Fri","Sat","Sun","Mon"];
+  let forecastHTML=`<div class="row">`;   
+  days.forEach(function(day) {
+    forecastHTML=
+      forecastHTML+
+              `
+            <div class="col">
+              <div class="data">${day}</div>
+              <img src="cloudy.png" alt="cloudy" width="50" />
+              <br />
+              20℃ <span class="night">11℃</span>
+            </div>
+            `;
+  });
+    forecastHTML=forecastHTML+`</div>`;
+    forecastElement.innerHTML=forecastHTML;
+   }
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
@@ -104,3 +122,5 @@ let fahrenheitLink=document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click",showFahrenheitTemp);
 
 searchCity("Lviv");
+
+displayForecast();
