@@ -98,21 +98,31 @@ fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML=Math.round(celsiusTemp);
 }
 
-function displayForecast(){
+function formatDay(timestamp){
+let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function displayForecast (response) {
+  let forecast=response.data.daily;
   let forecastElement=document.querySelector("#weather-forecast");
-  let days=["Thu","Fri","Sat","Sun","Mon"];
+  
   let forecastHTML=`<div class="row">`;   
-  days.forEach(function(day) {
+  forecast.forEach(function(forecastDay,index) {
+    if (index <5) {
     forecastHTML=
       forecastHTML+
               `
             <div class="col">
-              <div class="data">${day}</div>
-              <img src="cloudy.png" alt="cloudy" width="50" />
+              <div class="data">${formatDay(forecastDay.dt)}</div>
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="cloudy" width="50" />
               <br />
-              20℃ <span class="night">11℃</span>
+              ${Math.round(forecastDay.temp.max)}℃ <span class="night">${Math.round(forecastDay.temp.min)}℃</span>
             </div>
             `;
+    }
   });
     forecastHTML=forecastHTML+`</div>`;
     forecastElement.innerHTML=forecastHTML;
