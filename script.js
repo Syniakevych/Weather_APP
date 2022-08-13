@@ -138,5 +138,3 @@ let fahrenheitLink=document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click",showFahrenheitTemp);
 
 searchCity("Lviv");
-
-displayForecast();
