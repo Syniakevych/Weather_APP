@@ -1,25 +1,15 @@
 body {
     background: #222222;
 }
-
-.page-title {
-    color: #ffffff;
+h1,#temp,#time,.data,#current-location-button,#celsius-link.active,#fahrenheit-link.active {
+    color: #c2ced1 !important;
 }
-
-.card {
-    background: #222222;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 255.1);
+ul,.week,.name,svg {
+    color: #919496;
 }
-
-.card .title {
-    color: #ffffff;
+#city-input {
+    background-color: #222222;
 }
-
-.card .text {
-    color: #ffffff;
-}
-
-.theme {
-    background: #222222;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+button {
+    background-color: rgb(100%, 100%, 100%, 0);
 }

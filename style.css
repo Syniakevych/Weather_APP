@@ -1,28 +1,17 @@
-
-
 .container {
   font-family: 'Outfit', sans-serif;
-    
   padding-top: 0px;
 }
 .weather-app {
-  background-color: rgb(100%,100%,100%,0.7);
   display: block;
   margin: 20px auto;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #5f6769;
   border-radius: 10px;
   max-width: 800px;
   padding: 25px;
 }
-h1, #temp, #time,#celcius {
-  color: #3c4245 !important;
+h1, #temp, #time {
   font-size: 45px !important;
-}
-.data, #current-location-button {
-  color: #3c4245;
-}
-ul, #date, .week, .name {
-  color: #5f6769;
 }
 h1 {
   margin: 0px !important;
@@ -33,25 +22,32 @@ ul {
   padding: 0 0 0 20px !important;
   margin-top: 15px !important;
 }
-li {
+li{
   list-style: none;
+} 
+li,.row,#current-location-button,#date {
+  font-size: 18px;
+}
+li, #temp, #time {
+  font-weight: 400;
+}
+span, #date, .night,#current-location-button {
+  font-weight: 300;
 }
 #description {
   text-transform: capitalize;
 }
 form {
   padding: 15px 0;
-  background-color: rgb(100%, 100%, 100%, 0);
 }
-span, svg,#celsius-link,
-#fahrenheit-link {
-  color: #719192;
+span ,#celsius-link,
+#fahrenheit-link, #date,.link {
+  color: #ea7659;
 }
 button {
   transition: all 200ms ease-in-out;
   opacity: 5;
   border: 1px;
-  background-color: rgb(100%, 100%, 100%, 0);
 }
 #icon {
   float: left;
@@ -68,24 +64,19 @@ button {
   text-align: center;
 }
 .night {
-  font-size: 13px;
+  font-size: 15px;
 }
 .link {
   margin-left: 160px;
 }
-
 #celsius-link.active,#fahrenheit-link.active  {
-  color: #3c4245;
   text-decoration: none;
   cursor: default;
 }
-
 .theme {
   cursor: pointer;
   margin-top: 30px ;
   margin-left: 1040px;
   padding: 10px;
-  background: #ffffff;
-  
 }
 

@@ -148,7 +148,7 @@ button.addEventListener('click', function () {
 });
 
 function applyTheme(themeName) {
-  document.querySelector('[title="theme"]').setAttribute('href', `css/theme-${themeName}.css`); 
+  document.querySelector('[title="theme"]').setAttribute('href', `theme-${themeName}.css`); 
   changeThemeButtons.forEach(button => {
     button.style.display = 'block';
   });
